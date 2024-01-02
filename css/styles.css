@@ -1,0 +1,165 @@
+body {
+  background-color: black; /* Latar belakang hitam */
+}
+
+/* Gaya untuk teks yang sedang diketik */
+.typewriter-text {
+  z-index: 2; /* Menetapkan indeks z lebih tinggi dari kotak password */
+  position: relative;
+  overflow: hidden; /* Teks yang melebihi ukuran akan tersembunyi */
+  border-right: 0.15em solid orange; /* Garis imitasi kursor */
+  white-space: pre-line; /* Mengizinkan jeda baris */
+  color: white;
+  margin: 0 auto; /* Posisikan di tengah */
+  letter-spacing: 0.15em; /* Jarak antar huruf */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Animasi ketik */
+@keyframes typing {
+  from {
+    width: 0; /* Teks dimulai dari 0 lebar */
+  }
+  to {
+    width: 100%; /* Teks menjadi lebar penuh */
+  }
+}
+
+/* Animasi kursor yang berkedip */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Kursor transparan saat tidak aktif */
+  }
+  50% {
+    border-color: orange; /* Kursor berwarna saat aktif */
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+/* Gaya dasar untuk container utama */
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Gaya untuk form password */
+.password-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: transform 1s ease;
+}
+
+/* Gaya untuk kotak password */
+.password-form {
+  background-color: white; /* Latar belakang putih */
+  padding: 20px; /* Padding agar terlihat lebih lega */
+  border-radius: 8px; /* Sudut yang lebih lembut */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow untuk efek 3D */
+  text-align: center;
+}
+
+.password-form label {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.password-form input[type="password"] {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.password-form input[type="password"]:focus {
+  border-color: black; /* Warna border saat fokus */
+  outline: none; /* Hilangkan outline */
+}
+
+/* Gaya untuk tombol submit */
+.password-form button[type="submit"] {
+  padding: 10px 20px; /* Padding untuk ukuran tombol */
+  background-color: gray; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.password-form button[type="submit"]:hover {
+  background-color: black; /* Warna latar belakang saat hover */
+}
+
+/* Gaya dasar untuk slideshow */
+
+.slides-container {
+  width: 100%; /* Lebar maksimum sesuai dengan layar */
+  overflow: hidden; /* Mengatasi gambar yang terlalu besar */
+  z-index: 0;
+}
+
+.slides {
+  display: flex; /* Mengatur foto-foto berjajar secara horizontal */
+  transition: transform 3s ease; /* Efek pergeseran dengan durasi 3 detik */
+}
+
+img {
+  width: calc(100vw / 4); /* Menyesuaikan ukuran lebar foto */
+  height: auto; /* Menjaga proporsi asli gambar */
+  object-fit: cover; /* Untuk memastikan gambar terlihat baik dalam proporsi yang diinginkan */
+  vertical-align: top; /* Mengatur posisi vertikal ke atas */
+}
+
+.lyrics-container {
+  z-index: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  color: yellow;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; /* Menambahkan outline hitam */
+  display: none; /* Sembunyikan lirik awalnya */
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%; /* Mengisi lebar layar pada perangkat seluler */
+    height: auto;
+    object-fit: cover;
+    vertical-align: top;
+  }
+  .password-form {
+    max-width: 100%; /* Mengisi lebar layar pada perangkat seluler */
+  }
+  .password-message {
+    margin-bottom: -200px; /* Mengurangi jarak antara teks dengan kotak password */
+  }
+}
