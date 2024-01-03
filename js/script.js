@@ -11,7 +11,7 @@ const slideWidth = 100 / 4; // Lebar setiap slide (4 foto)
 
 // Teks yang ingin dijalankan dengan efek ketikan
 const textToType =
-  "Happy anniversary, my love APRYLIA MERIANA PUTRI. As I reflect on these beautiful 365 days, I find myself hoping for an eternity by your side (cliché, I know). Nevertheless, here's my humble tribute, expressing immense gratitude for crossing paths with you, for every precious moment shared, and for the countless moments yet to unfold. You've woven your essence into my existence, and the mere thought of a future with you fills my soul with an exhilaration akin to a breathtaking dance on the edge of eternity === PW NYA 05-01-2023.";
+  "Happy anniversary, my love APRYLIA MERIANA PUTRI. As I reflect on these beautiful 365 days, I find myself hoping for an eternity by your side (cliché, I know). Nevertheless, here's my humble tribute, expressing immense gratitude for crossing paths with you, for every precious moment shared, and for the countless moments yet to unfold. You've woven your essence into my existence, and the mere thought of a future with you fills my soul with an exhilaration akin to a breathtaking dance on the edge of eternity PW NYA 05-01-2023.";
 
 // Inisialisasi elemen teks dan variabel
 const typingTextElement = document.getElementById("typingText");
